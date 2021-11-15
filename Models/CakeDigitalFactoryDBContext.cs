@@ -117,8 +117,14 @@ namespace CakeDigitalFactory.Services.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("nombre");
+
+                entity.Property(e => e.UserName)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("UserName");
             });
 
+          
             modelBuilder.Entity<Venta>(entity =>
             {
 
@@ -144,8 +150,29 @@ namespace CakeDigitalFactory.Services.Models
                 entity.Property(e => e.TotalVenta).HasColumnName("totalVenta");
             });
 
+            modelBuilder.Entity<Productos>(entity =>
+            {
+
+                entity.HasKey(x => x.Id);
+                entity.Property(e => e.FechaRegistro)
+                    .HasColumnType("datetime")
+                    .HasColumnName("fechaRegistro");
+
+                entity.Property(e => e.Id).HasColumnName("id").IsRequired().UseIdentityColumn();
+
+                entity.Property(e => e.NombreProducto).HasColumnName("NombreProducto");
+
+                entity.Property(e => e.Precio).HasColumnName("Precio");
+
+                entity.Property(e => e.IdTienda).HasColumnName("IdTienda");
+
+                entity.Property(e => e.FechaRegistro).HasColumnName("FechaRegistro");
+
+            });
             OnModelCreatingPartial(modelBuilder);
         }
+
+
 
         partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }

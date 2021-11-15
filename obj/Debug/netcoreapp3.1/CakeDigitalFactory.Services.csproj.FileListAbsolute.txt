@@ -131,7 +131,6 @@ C:\Users\DELL\Documents\ProyectoFinal\CakeDigitalFactory.Services\obj\Debug\netc
 C:\Users\DELL\Documents\ProyectoFinal\CakeDigitalFactory.Services\obj\Debug\netcoreapp3.1\staticwebassets\CakeDigitalFactory.Services.StaticWebAssets.xml
 C:\Users\DELL\Documents\ProyectoFinal\CakeDigitalFactory.Services\obj\Debug\netcoreapp3.1\scopedcss\bundle\CakeDigitalFactory.Services.styles.css
 C:\Users\DELL\Documents\ProyectoFinal\CakeDigitalFactory.Services\obj\Debug\netcoreapp3.1\CakeDigitalFactory.Services.RazorTargetAssemblyInfo.cache
-C:\Users\DELL\Documents\ProyectoFinal\CakeDigitalFactory.Services\obj\Debug\netcoreapp3.1\CakeDigitalFactory.Services.csproj.CopyComplete
 C:\Users\DELL\Documents\ProyectoFinal\CakeDigitalFactory.Services\obj\Debug\netcoreapp3.1\CakeDigitalFactory.Services.dll
 C:\Users\DELL\Documents\ProyectoFinal\CakeDigitalFactory.Services\obj\Debug\netcoreapp3.1\CakeDigitalFactory.Services.pdb
 C:\Users\DELL\Documents\ProyectoFinal\CakeDigitalFactory.Services\obj\Debug\netcoreapp3.1\CakeDigitalFactory.Services.genruntimeconfig.cache

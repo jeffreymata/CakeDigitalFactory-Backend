@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Features",
+    "\\Features\\Encargos",
+    "\\Migrations",
+    "\\Models"
   ],
+  "SelectedNode": "\\Features\\Encargos\\EncargosService.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,4 +1,5 @@
 using CakeDigitalFactory.Services.Features.Encargos;
+using CakeDigitalFactory.Services.Features.Login;
 using CakeDigitalFactory.Services.Features.Tiendas;
 using CakeDigitalFactory.Services.Features.Usuarios;
 using CakeDigitalFactory.Services.Features.Ventas;
@@ -37,6 +38,7 @@ namespace CakeDigitalFactory.Services
             services.AddScoped<TiendasService>();
             services.AddScoped<UsuariosService>();
             services.AddScoped<VentasService>();
+            services.AddScoped<LoginServices>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-#nullable disable
-
-namespace CakeDigitalFactory.Services.Models
+namespace CakeDigitalFactory.Services.Features.Usuarios
 {
-    public partial class Usuario
+    public class UsuariosDto
     {
         public int Id { get; set; }
         public string Nombre { get; set; }
         public string UserName { get; set; }
         public string Correo { get; set; }
         public DateTime? FechaCreacion { get; set; }
-        public string  Password { get; set; }
+        public string Password { get; set; }
     }
 }

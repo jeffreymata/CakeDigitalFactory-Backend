@@ -4,14 +4,16 @@ using CakeDigitalFactory.Services.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CakeDigitalFactory.Services.Migrations
 {
     [DbContext(typeof(CakeDigitalFactoryDBContext))]
-    partial class CakeDigitalFactoryDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211111020930_addingPasswordToUsuarioTable")]
+    partial class addingPasswordToUsuarioTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,37 +61,6 @@ namespace CakeDigitalFactory.Services.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Encargos");
-                });
-
-            modelBuilder.Entity("CakeDigitalFactory.Services.Models.Productos", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("id")
-                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
-                        .HasAnnotation("SqlServer:IdentitySeed", 1)
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<DateTime>("FechaRegistro")
-                        .HasColumnType("datetime")
-                        .HasColumnName("FechaRegistro");
-
-                    b.Property<int>("IdTienda")
-                        .HasColumnType("int")
-                        .HasColumnName("IdTienda");
-
-                    b.Property<string>("NombreProducto")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("NombreProducto");
-
-                    b.Property<decimal>("Precio")
-                        .HasColumnType("decimal(18,2)")
-                        .HasColumnName("Precio");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Productos");
                 });
 
             modelBuilder.Entity("CakeDigitalFactory.Services.Models.Tienda", b =>
@@ -167,12 +138,6 @@ namespace CakeDigitalFactory.Services.Migrations
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
-                        .HasColumnName("UserName");
 
                     b.HasKey("Id");
 

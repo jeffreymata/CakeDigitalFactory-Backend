@@ -4,14 +4,16 @@ using CakeDigitalFactory.Services.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CakeDigitalFactory.Services.Migrations
 {
     [DbContext(typeof(CakeDigitalFactoryDBContext))]
-    partial class CakeDigitalFactoryDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211111024909_addingProductTable")]
+    partial class addingProductTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -167,12 +169,6 @@ namespace CakeDigitalFactory.Services.Migrations
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
-                        .HasMaxLength(50)
-                        .IsUnicode(false)
-                        .HasColumnType("varchar(50)")
-                        .HasColumnName("UserName");
 
                     b.HasKey("Id");
 

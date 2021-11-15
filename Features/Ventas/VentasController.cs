@@ -11,5 +11,30 @@ namespace CakeDigitalFactory.Services.Features.Ventas
     [ApiController]
     public class VentasController : ControllerBase
     {
+        private readonly VentasService _ventasService;
+
+        public VentasController(VentasService ventasService)
+        {
+            _ventasService = ventasService;
+        }
+
+
+        [HttpGet]
+        [Route("get-ventas")]
+        public ActionResult getVentas()
+        {
+            Result result = _ventasService.getVentas();
+
+            return Ok(result);
+        }
+
+        [HttpPost]
+        [Route("post-venta")]
+        public ActionResult postVenta(VentasDto request)
+        {
+            Result result = _ventasService.CreateVenta(request);
+            return Ok(result);
+        }
+
     }
 }
