@@ -22,6 +22,7 @@ namespace CakeDigitalFactory.Services
 {
     public class Startup
     {
+        readonly string CorsOrigins = "_myAllowSpecificOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -39,6 +40,17 @@ namespace CakeDigitalFactory.Services
             services.AddScoped<UsuariosService>();
             services.AddScoped<VentasService>();
             services.AddScoped<LoginServices>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: CorsOrigins,
+                builder =>
+                {
+                    builder.AllowAnyOrigin();
+                    builder.AllowAnyMethod();
+                    builder.AllowAnyHeader();
+                });
+            });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 

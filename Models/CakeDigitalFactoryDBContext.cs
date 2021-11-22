@@ -122,6 +122,10 @@ namespace CakeDigitalFactory.Services.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("UserName");
+
+                entity.Property(e => e.isAdmin)
+                 .IsUnicode(false)
+                 .HasColumnName("isAdmin");
             });
 
           

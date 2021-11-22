@@ -13,5 +13,6 @@ namespace CakeDigitalFactory.Services.Models
         public string Correo { get; set; }
         public DateTime? FechaCreacion { get; set; }
         public string  Password { get; set; }
+        public bool isAdmin { get; set; }
     }
 }

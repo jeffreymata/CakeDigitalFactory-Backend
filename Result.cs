@@ -10,5 +10,6 @@ namespace CakeDigitalFactory.Services
         public string Message { get; set; }
 
         public object Data { get; set; }
+        public bool isActive { get; set; }
     }
 }

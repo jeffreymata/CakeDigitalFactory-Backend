@@ -20,11 +20,19 @@ namespace CakeDigitalFactory.Services.Features.Login
         }
 
         [HttpGet]
-        [Route("login-validation/{username}/{passWord}")]
+        [Route("login/{user}")]
 
-        public ActionResult loginValidation(string username, string passWord)
+        public ActionResult loginValidation(string user, string passWord)
         {
-            return Ok(_loginServices.GetLoginValidation(username,  passWord));
+            return Ok(_loginServices.GetLoginValidation(user,  passWord));
+        }
+
+        [HttpGet]
+        [Route("get-user-by-name/{user}")]
+
+        public ActionResult getUserByName(string user)
+        {
+            return Ok(_loginServices.GetUserByName(user));
         }
     }
 }

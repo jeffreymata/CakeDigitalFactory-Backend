@@ -4,14 +4,16 @@ using CakeDigitalFactory.Services.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CakeDigitalFactory.Services.Migrations
 {
     [DbContext(typeof(CakeDigitalFactoryDBContext))]
-    partial class CakeDigitalFactoryDBContextModelSnapshot : ModelSnapshot
+    [Migration("20211121053233_UserType")]
+    partial class UserType
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
